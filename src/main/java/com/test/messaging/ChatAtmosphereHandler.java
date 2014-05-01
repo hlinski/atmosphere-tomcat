@@ -1,15 +1,11 @@
-package com.fitbit.messaging;
+package com.test.messaging;
 
 
-import org.atmosphere.cache.HeaderBroadcasterCache;
-import org.atmosphere.client.TrackMessageSizeInterceptor;
 import org.atmosphere.config.service.AtmosphereHandlerService;
 import org.atmosphere.cpr.AtmosphereResponse;
 import org.atmosphere.handler.OnMessage;
 import org.atmosphere.interceptor.AtmosphereResourceLifecycleInterceptor;
 import org.atmosphere.interceptor.BroadcastOnPostAtmosphereInterceptor;
-import org.atmosphere.interceptor.HeartbeatInterceptor;
-import org.atmosphere.plugin.redis.RedisBroadcaster;
 
 import java.io.IOException;
 import java.util.Date;

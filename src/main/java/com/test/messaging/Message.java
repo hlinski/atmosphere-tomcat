@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.fitbit.messaging;
+package com.test.messaging;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

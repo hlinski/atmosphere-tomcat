@@ -13,7 +13,7 @@
         <!-- Use it with mvn jetty:run -->
         <init-param>
             <param-name>org.atmosphere.cpr.packages</param-name>
-            <param-value>com.fitbit.messaging</param-value>
+            <param-value>com.test.messaging</param-value>
         </init-param>
         <init-param>
             <param-name>org.atmosphere.plugin.redis.RedisBroadcaster.server</param-name>

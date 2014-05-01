@@ -1,4 +1,4 @@
-package com.fitbit.messaging;
+package com.test.messaging;
 
 /**
  * Hello world!
