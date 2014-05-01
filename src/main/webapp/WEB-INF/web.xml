@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee    http://java.sun.com/xml/ns/j2ee/web-app_2.5.xsd">
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2.5.xsd">
 
     <description>Atmosphere Chat</description>
     <display-name>Atmosphere Chat</display-name>
@@ -20,10 +19,10 @@
             <param-name>org.atmosphere.plugin.redis.RedisBroadcaster.server</param-name>
             <param-value>http://localhost:6379</param-value>
         </init-param>
-        <!--init-param>
+        <init-param>
             <param-name>org.atmosphere.useNative</param-name>
-            <param-value>false</param-value>
-        </init-param-->
+            <param-value>true</param-value>
+        </init-param>
         <!--init-param>
             <param-name>org.atmosphere.useWebSocketAndServlet3</param-name>
             <param-value>false</param-value>
