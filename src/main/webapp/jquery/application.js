@@ -49,7 +49,12 @@ $(function () {
 
         var message = response.responseBody;
         try {
-            var json = jQuery.parseJSON(message);
+            var json;
+            if(message.indexOf('|') > -1){
+                json = jQuery.parseJSON(message.split('|')[1]);
+            } else {
+                json = jQuery.parseJSON(message);
+            }
         } catch (e) {
             console.log('This doesn\'t look like a valid JSON: ', message.data);
             return;

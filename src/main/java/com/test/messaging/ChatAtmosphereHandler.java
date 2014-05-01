@@ -1,11 +1,15 @@
 package com.test.messaging;
 
 
+import org.atmosphere.cache.HeaderBroadcasterCache;
+import org.atmosphere.client.TrackMessageSizeInterceptor;
 import org.atmosphere.config.service.AtmosphereHandlerService;
 import org.atmosphere.cpr.AtmosphereResponse;
 import org.atmosphere.handler.OnMessage;
 import org.atmosphere.interceptor.AtmosphereResourceLifecycleInterceptor;
 import org.atmosphere.interceptor.BroadcastOnPostAtmosphereInterceptor;
+import org.atmosphere.interceptor.HeartbeatInterceptor;
+import org.atmosphere.plugin.redis.RedisBroadcaster;
 
 import java.io.IOException;
 import java.util.Date;
@@ -16,12 +20,11 @@ import java.util.Date;
  * @author Jeanfrancois Arcand
  */
 @AtmosphereHandlerService(path="/chat",
-        //broadcasterCache = HeaderBroadcasterCache.class,
-        //broadcaster = RedisBroadcaster.class,
-        //TrackMessageSizeInterceptor.class
+        broadcasterCache = HeaderBroadcasterCache.class,
+        broadcaster = RedisBroadcaster.class,
         interceptors = {AtmosphereResourceLifecycleInterceptor.class,
-                BroadcastOnPostAtmosphereInterceptor.class})
-//HeartbeatInterceptor.class
+                BroadcastOnPostAtmosphereInterceptor.class, HeartbeatInterceptor.class})
+//TrackMessageSizeInterceptor.class
 public class ChatAtmosphereHandler extends OnMessage<String> {
 
     @Override
