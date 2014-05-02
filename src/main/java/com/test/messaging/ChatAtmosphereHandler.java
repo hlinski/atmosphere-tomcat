@@ -19,7 +19,7 @@ import java.util.Date;
  *
  * @author Jeanfrancois Arcand
  */
-@AtmosphereHandlerService(path="/chat",
+@AtmosphereHandlerService(path="/chat/{program}/{location}/{division}",
         broadcasterCache = HeaderBroadcasterCache.class,
         broadcaster = RedisBroadcaster.class,
         interceptors = {AtmosphereResourceLifecycleInterceptor.class,
